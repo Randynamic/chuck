@@ -11,6 +11,10 @@ class App extends Component {
   };
 
   componentDidMount() {
+    this.fetchData();
+  };
+
+  fetchData = () => {
     fetch("http://api.icndb.com/jokes/random/10")
     .then( (response) => {
       return response.json() })
@@ -18,7 +22,7 @@ class App extends Component {
       this.setState({data: json.value});
       console.log(this.state.data);
     })
-  };
+  }
 
   render() {
     return (
@@ -28,6 +32,7 @@ class App extends Component {
           <h1 className="App-title">Chuck Norris Case</h1>
         </header>
         <div>
+        <button onClick={this.fetchData}>Generate Chuck Jokes</button>
           <ul>
             {
               this.state.data.map(function(item) {
