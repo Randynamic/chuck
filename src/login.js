@@ -28,6 +28,23 @@ class Login extends Component {
     return (/[A-Z]/.test(string));
   }
 
+  checkIncreaseChar(string){
+    //check of er drie opeenvolgende karakters zijn
+    //cijfers tellen niet mee. Wel a-x
+    let checker = false;
+    for(let i = 0; i < string.length-2; i++){
+      if(
+        string.charCodeAt(i) === (string.charCodeAt(i+1)-1) &&
+        string.charCodeAt(i) === (string.charCodeAt(i+2)-2) &&
+        string.charCodeAt(i) >= 'a'.charCodeAt(0) &&
+        string.charCodeAt(i) <= 'x'.charCodeAt(0) ){
+        checker = true;
+      }
+    }
+    return checker;
+  }
+
+
   render() {
     return (
       <div className="App">
