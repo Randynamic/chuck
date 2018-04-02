@@ -37,9 +37,7 @@ class App extends Component {
             {
               this.state.data.map(function(item) {
                 return (
-                  <div className="Employee">
-                    <li> {item.joke} </li>
-                  </div>
+                    <li key={item.id}> {item.joke} </li>
                 )
               })
             }
