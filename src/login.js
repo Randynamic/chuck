@@ -44,6 +44,9 @@ class Login extends Component {
     return checker;
   }
 
+  checkAllRequirements(string){
+    return checkDoubles(string) && checkLength(string) && checkIncreaseChar(string) && !checkForbidden(string) && !checkUpperCase(string);
+  }
 
   render() {
     return (
