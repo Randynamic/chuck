@@ -24,16 +24,31 @@ class App extends Component {
     })
   }
 
+
+  //Wilt niet werken in <li> Uitzoeken en fixen
+  favoriteItem = () => {
+    for (let item in localStorage) {
+      console.log(item, ' = ', localStorage[item]);
+    }
+
+    // if(!fav) {
+    //   localStorage.setItem(id, joke);
+    //   //+ set className fav
+    // } else {
+    //   localStorage.removeItem(id)
+    // }
+  }
+
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Chuck Norris Case</h1>
         </header>
         <div>
         <button onClick={this.fetchData}>Generate Chuck Jokes</button>
-          <ul>
+          <ul onClick={this.favoriteItem} className="Chuck-joke">
             {
               this.state.data.map(function(item) {
                 return (
