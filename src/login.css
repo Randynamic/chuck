@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  color: rgb(255, 255, 255);
+  background-color: rgb(34, 34, 34);
+  height: 150px;
+  padding: 20px;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.Login-form {
+  background-color: rgb(241, 241, 241);
+  padding: 20px;
+}
+
+.Password-box {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
