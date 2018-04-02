@@ -5,7 +5,16 @@ class Login extends Component {
 
   constructor(){
     super();
+    //voor directe password check
+    this.state = {
+      password: ''
+    };
   };
+
+  // updatePasswordCheck(e) {
+  //   this.setState({password:e.target.value})
+  //   console.log(e.target.value)
+  // }
 
   checkDoubles(string){
     //checkt of password twee maal dubbele letters bevat
@@ -52,11 +61,10 @@ class Login extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Chuck Norris Case</h1>
         </header>
-        <div className="Passwordbox">
-          <input type='text' className="Passwordbox">Generate Chuck Jokes</button>
+        <div className="Login-form">
+          <input type='text' className="Password-box" placeholder="password.." />
         </div>
       </div>
     );
